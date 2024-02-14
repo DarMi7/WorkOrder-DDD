@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: mech-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/Manhattan?characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: veoride@dev
+  main:
+    allow-bean-definition-overriding: true
+
+server:
+  port: 8080
+  tomcat:
+    max-connections: 10000
+    accept-count: 200
+    threads:
+      min-spare: 100
+      max: 400
+
+asset:
+  service:
+    url: http://asset-service:8080
