@@ -20,3 +20,7 @@ server:
 asset:
   service:
     url: http://asset-service:8080
+
+task:
+  service:
+    url: http://task-service:8080

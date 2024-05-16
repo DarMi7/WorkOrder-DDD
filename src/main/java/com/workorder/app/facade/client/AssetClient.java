@@ -5,10 +5,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "asset-service", url = "${asset.service.url}", path = "/assets", contextId = "asset")
+@FeignClient(name = "asset-service", url = "${asset.service.url}", path = "/assets", contextId = "assetClient")
 public interface AssetClient {
 
-  @GetMapping("/iotNumber/{iotNumber}")
-  AssetDto getByIotNumber(@PathVariable("iotNumber") Long iotNumber);
+    @GetMapping("/iotNumber/{iotNumber}")
+    AssetDto getByIotNumber(@PathVariable("iotNumber") Long iotNumber);
 
 }
